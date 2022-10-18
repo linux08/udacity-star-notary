@@ -1,6 +1,8 @@
 # ND1309 C2 Ethereum Smart Contracts, Tokens and Dapps - Project Starter 
 **PROJECT: Decentralized Star Notary Service Project** - For this project, you will create a DApp by adding functionality with your smart contract and deploy it on the public testnet.
 
+### ToDo
+This Starter Code has already implemented the functionalities you implemented in the StarNotary (Version 2) exercise, and have comments in all the files you need to implement your tasks.
 
 
 
@@ -86,21 +88,51 @@ npm run dev
 
 ---
 
-## Versions
+### Important
+When you will add a new Rinkeyby Test Network in your Metamask client, you will have to provide:
 
-| Package   | Version |
-|:-------:|:-------------|
-|Truffle| v5.5.29 (core: 5.5.29) |
-|Solidity| 0.6.2 (solc-js) |
-|Node| v12.22.12 |
-|Web3.js| v1.8.0 |
+| Network Name | New RPC URL | Chain ID |
+|---|---|---|
+|Private Network 1|`http://127.0.0.1:9545/`|1337 |
+
+The chain ID above can be fetched by:
+```bash
+cd app
+node index.js
+```
+
+## Troubleshoot
+#### Error 1 
+```
+'webpack-dev-server' is not recognized as an internal or external command
+```
+**Solution:**
+- Delete the node_modules folder, the one within the /app folder
+- Execute `npm install` command from the /app folder
+
+After a long install, everything will work just fine!
 
 
-### Contract Address
+#### Error 2
+```
+ParserError: Source file requires different compiler version. 
+Error: Truffle is currently using solc 0.5.16, but one or more of your contracts specify "pragma solidity >=0.X.X <0.X.X".
+```
+**Solution:** In such a case, ensure the following in `truffle-config.js`:
+```js
+// Configure your compilers  
+compilers: {    
+  solc: {      
+    version: "0.5.16", // <- Use this        
+    // docker: true,
+    // ...
+```
 
-contract address:    0x267adBfc8D365ebFFC4EC6617807EEc33e3533F5
+## Raise a PR or report an Issue
+1. Feel free to raise a [Pull Request](https://github.com/udacity/nd1309-p2-Decentralized-Star-Notary-Service-Starter-Code/pulls) if you find a bug/scope of improvement in the current repository. 
 
-### Token Address
+2. If you have suggestions or facing issues, you can log in issue. 
 
-<https://rinkeby.etherscan.io/token/0x267adbfc8d365ebffc4ec6617807eec33e3533f5>
+---
 
+Do not use the [Old depreacted zipped starter code](https://s3.amazonaws.com/video.udacity-data.com/topher/2019/January/5c51c4c0_project-5-starter-code/project-5-starter-code.zip)

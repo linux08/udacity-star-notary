@@ -5,7 +5,10 @@ build
 # production
 /build
 
+node_modules
+
 # misc
+.env
 .DS_Store
 .env.local
 .env.development.local
