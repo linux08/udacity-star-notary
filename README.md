@@ -98,9 +98,9 @@ npm run dev
 
 ### Contract Address
 
-contract address:    0x267adBfc8D365ebFFC4EC6617807EEc33e3533F5
+contract address:    0xe694a0d411569945052192b5c92c9c2366443eea
 
 ### Token Address
 
-<https://rinkeby.etherscan.io/token/0x267adbfc8d365ebffc4ec6617807eec33e3533f5>
+https://goerli.etherscan.io/token/0xe694a0d411569945052192b5c92c9c2366443eea
 
